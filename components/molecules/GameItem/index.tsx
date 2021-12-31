@@ -15,7 +15,7 @@ export default function GameItem(props: GameItemProps) {
       <Link href={`/detail/${id}`}>
         <a>
           <div className="blur-sharp">
-            <Image
+            <img
               className="thumbnail"
               src={thumbnail}
               width={205}
@@ -26,7 +26,7 @@ export default function GameItem(props: GameItemProps) {
           <div className="cover position-absolute bottom-0 m-32">
             <div className="d-flex flex-column h-100 justify-content-between text-decoration-none">
               <div className="game-icon mx-auto">
-                <Image
+                <img
                   src="/icon/console.svg"
                   width={54}
                   height={36}
