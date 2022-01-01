@@ -15,7 +15,9 @@ import "../styles/transactions-detail.css";
 import "../styles/edit-profile.css";
 import "../styles/navbar-log-in.css";
 import type { AppProps } from "next/app";
+import { ToastContainer } from "react-toastify";
 import Head from "next/head";
+import "react-toastify/dist/ReactToastify.css";
 
 function MyApp({ Component, pageProps }: AppProps) {
   return (
@@ -43,6 +45,7 @@ function MyApp({ Component, pageProps }: AppProps) {
         />
       </Head>
       <Component {...pageProps} />
+      <ToastContainer />
 
       {/* Call Bootstrap JS */}
       <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"

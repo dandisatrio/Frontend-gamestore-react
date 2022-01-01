@@ -9,10 +9,6 @@ import { useRouter } from "next/router";
 export default function Auth() {
   const [isLogin, setIslogin] = useState(false);
   const [user, setUser] = useState({
-    id: "",
-    username: "",
-    name: "",
-    email: "",
     avatar: "",
   });
   const router = useRouter()
@@ -23,10 +19,8 @@ export default function Auth() {
       const jwtToken = atob(token);
       const payload: JWTPayloadTypes = jwtDecode(jwtToken);
       const userFromPayload: UserTypes = payload.player;
-      const IMG = process.env.NEXT_PUBLIC_IMG;
-      user.avatar = `${IMG}/${userFromPayload.avatar}`;
       setIslogin(true);
-      setUser(user);
+      setUser(userFromPayload);
     }
   }, []);
 
@@ -50,7 +44,7 @@ export default function Auth() {
             aria-expanded="false"
           >
             <img
-              src={user.avatar}
+              src={`${process.env.NEXT_PUBLIC_IMG}/${user.avatar}`}
               className="rounded-circle"
               width="40"
               height="40"

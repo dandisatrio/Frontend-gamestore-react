@@ -1,5 +1,6 @@
 import { useRouter } from "next/router";
 import { useState } from "react";
+import { toast } from "react-toastify";
 import {
   BankTypes,
   NominalTypes,
@@ -35,7 +36,7 @@ export default function TopUpForm(props: TopupFormProps) {
 
   const onSubmit = () => {
     if(verifyID === '' || bankAccountName === '' || nominalItem === {} || paymentItem === {}) {
-      alert('Silahkan isi semua data')
+      toast.error('Silahkan isi semua data')
     } else {
       const data = {
         verifyID,
