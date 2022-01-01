@@ -1,7 +1,7 @@
 import { useCallback, useEffect, useState } from "react";
 import { toast } from "react-toastify";
 import { HistoryTransactionTypes, TopUpCategoriesTypes } from "../../../services/data-types";
-import { getMemberOverview } from "../../../services/player";
+import { getMemberOverview } from "../../../services/member";
 import Category from "./Category";
 import TableRow from "./TableRow";
 
@@ -17,7 +17,6 @@ export default function OverviewContent() {
       setCount(response.data.count);
       setData(response.data.data);
     }
-    console.log(response)
   }, []);
 
   useEffect(() => {
