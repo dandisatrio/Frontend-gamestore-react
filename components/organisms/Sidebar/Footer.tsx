@@ -66,7 +66,7 @@ export default function Footer() {
         </div>
         <a
           className="btn btn-get-started w-100 fw-medium text-xs text-center text-white rounded-pill"
-          href="#"
+          href="/"
           role="button"
         >
           Get Started

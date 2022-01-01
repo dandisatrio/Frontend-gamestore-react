@@ -54,7 +54,7 @@ export default function TopUpForm(props: TopupFormProps) {
       <div className="pt-md-50 pt-30">
         <div className="">
           <label
-            for="ID"
+            htmlFor="ID"
             className="form-label text-lg fw-medium color-palette-1 mb-10"
           >
             Verify ID
@@ -100,6 +100,7 @@ export default function TopUpForm(props: TopupFormProps) {
             {payments.map((payment) =>
               payment.banks.map((bank) => (
                 <PaymentItem
+                key={bank._id}
                   bankID={bank._id}
                   type={payment.type}
                   name={bank.bankName}

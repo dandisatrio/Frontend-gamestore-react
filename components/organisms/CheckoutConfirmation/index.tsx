@@ -16,6 +16,7 @@ export default function CheckoutConfirmation() {
 
     if (!checkbox) {
       toast.error("Pastikan anda telah melakukan pembayaran");
+      return
     }
     const data = {
       voucher: dataItem._id,
@@ -30,8 +31,8 @@ export default function CheckoutConfirmation() {
     if (result.error) {
       toast.error(result.message);
     } else {
-      toast.success("Checkout Berhasil");
       router.push("/complete-checkout");
+      toast.success("Checkout Berhasil");
     }
   };
 

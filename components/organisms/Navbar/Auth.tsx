@@ -30,6 +30,8 @@ export default function Auth() {
     setIslogin(false)
   }
 
+  const IMG = process.env.NEXT_PUBLIC_IMG
+
   if (isLogin) {
     return (
       <li className="nav-item my-auto dropdown d-flex">
@@ -44,7 +46,7 @@ export default function Auth() {
             aria-expanded="false"
           >
             <img
-              src={`${process.env.NEXT_PUBLIC_IMG}/${user.avatar}`}
+              src={`${IMG}/${user.avatar}`}
               className="rounded-circle"
               width="40"
               height="40"

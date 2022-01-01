@@ -55,7 +55,7 @@ export default function SignUpPhoto() {
     } else {
       toast.success('Register Success')
       router.push('/sign-up-success')
-      localStorage.removeItem('user-form')
+      
     }
   }
 

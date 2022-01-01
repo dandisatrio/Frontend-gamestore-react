@@ -1,6 +1,11 @@
 import Link from "next/link";
+import { useEffect } from "react";
 
 export default function CompleteCheckout() {
+  useEffect(() => {
+    localStorage.removeItem('data-item')
+    localStorage.removeItem('data-topup')
+  })
   return (
     <section className="complete-checkout mx-auto pt-lg-145 pb-lg-145 pt-100 pb-80">
       <div className="container-fluid">
