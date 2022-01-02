@@ -1,6 +1,7 @@
 module.exports = {
   images: {
-    domains: ["http://localhost:4000"],
+    domains: ['https://gamestore-server-express.herokuapp.com'],
+    // domains: ['https://gamestore-server-express.herokuapp.com'],
   },
   eslint: {
     // Warning: This allows production builds to successfully complete even if
