@@ -9,7 +9,7 @@ interface TableRowProps {
   item: string;
   price: number;
   status: string;
-  id: string
+  id: string;
 }
 
 export default function TableRow(props: TableRowProps) {

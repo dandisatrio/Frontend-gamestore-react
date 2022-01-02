@@ -7,7 +7,7 @@ export default function SignUpForm() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
 
-  const router = useRouter()
+  const router = useRouter();
   const className = {
     label: cx("form-label text-lg fw-medium color-palette-1 mb-10"),
   };
@@ -16,10 +16,10 @@ export default function SignUpForm() {
     const userForm = {
       email,
       name,
-      password
-    }
-    localStorage.setItem('user-form', JSON.stringify(userForm))
-    router.push('sign-up-photo')
+      password,
+    };
+    localStorage.setItem("user-form", JSON.stringify(userForm));
+    router.push("sign-up-photo");
   };
 
   return (

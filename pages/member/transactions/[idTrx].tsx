@@ -12,7 +12,7 @@ export default function TransactionsDetail(props: TransactionsDetailProps) {
   const {transactionDetail} = props
   return (
     <section className="transactions-detail overflow-auto">
-      <Sidebar />
+      <Sidebar activeMenu="transactions" />
       <TransactionDetailContent data={transactionDetail} />
     </section>
   );
@@ -48,7 +48,6 @@ export async function getServerSideProps({ req, params }: GetServerSideProps) {
   const IMG = process.env.NEXT_PUBLIC_IMG;
   userFromPayload.avatar = `${IMG}/${userFromPayload.avatar}`;
   const response = await getTransactionDetail(idTrx, jwtToken)
-  console.log(response)
   return {
     props: {
       transactionDetail: response.data,

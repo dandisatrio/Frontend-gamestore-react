@@ -20,7 +20,7 @@ export default function TopUpForm(props: TopupFormProps) {
   const [nominalItem, setNominalItem] = useState({});
   const [paymentItem, setPaymentItem] = useState({});
   const { nominals, payments } = props;
-  const router = useRouter()
+  const router = useRouter();
 
   const onNominalItemChange = (data: NominalTypes) => {
     setNominalItem(data);
@@ -31,26 +31,31 @@ export default function TopUpForm(props: TopupFormProps) {
       payment,
       bank,
     };
-    setPaymentItem(data)
+    setPaymentItem(data);
   };
 
   const onSubmit = () => {
-    if(verifyID === '' || bankAccountName === '' || nominalItem === {} || paymentItem === {}) {
-      toast.error('Silahkan isi semua data')
+    if (
+      verifyID === "" ||
+      bankAccountName === "" ||
+      nominalItem === {} ||
+      paymentItem === {}
+    ) {
+      toast.error("Silahkan isi semua data");
     } else {
       const data = {
         verifyID,
         bankAccountName,
         nominalItem,
-        paymentItem
-      }
-      localStorage.setItem('data-topup', JSON.stringify(data))
-      router.push('/checkout')
+        paymentItem,
+      };
+      localStorage.setItem("data-topup", JSON.stringify(data));
+      router.push("/checkout");
     }
   };
 
   return (
-    <form action="./checkout.html" method="POST">
+    <>
       <div className="pt-md-50 pt-30">
         <div className="">
           <label
@@ -100,7 +105,7 @@ export default function TopUpForm(props: TopupFormProps) {
             {payments.map((payment) =>
               payment.banks.map((bank) => (
                 <PaymentItem
-                key={bank._id}
+                  key={bank._id}
                   bankID={bank._id}
                   type={payment.type}
                   name={bank.bankName}
@@ -139,6 +144,6 @@ export default function TopUpForm(props: TopupFormProps) {
           Continue
         </button>
       </div>
-    </form>
+    </>
   );
 }

@@ -1,12 +1,12 @@
 interface PaymentItemProps {
-    bankID: string;
-    type: string;
-    name: string;
-    onChange: () => void
+  bankID: string;
+  type: string;
+  name: string;
+  onChange: () => void;
 }
 
 export default function PaymentItem(props: PaymentItemProps) {
-    const {bankID, type, name, onChange} = props
+  const { bankID, type, name, onChange } = props;
   return (
     <>
       <label

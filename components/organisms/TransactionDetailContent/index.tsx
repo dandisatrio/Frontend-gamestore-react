@@ -74,8 +74,14 @@ export default function TransactionDetailContent(
                 <Row label="Your Account Name" value={data.name} />
                 <Row label="Type" value={data.historyPayment.type} />
                 <Row label="Bank Name" value={data.historyPayment.bankName} />
-                <Row label="Bank Account Name" value={data.historyPayment.name} />
-                <Row label="Bank Number" value={data.historyPayment.noRekening} />
+                <Row
+                  label="Bank Account Name"
+                  value={data.historyPayment.name}
+                />
+                <Row
+                  label="Bank Number"
+                  value={data.historyPayment.noRekening}
+                />
               </div>
               <div className="d-md-block d-flex flex-column w-100">
                 <a

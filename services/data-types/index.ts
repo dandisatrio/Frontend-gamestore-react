@@ -71,7 +71,7 @@ export interface HistoryVoucherTopupTypes {
 }
 
 export interface HistoryPaymentTypes {
-  bankname: string
+  bankName: string
   name: string
   noRekening: string
   type: string

@@ -19,8 +19,7 @@ export default function GameItem(props: GameItemProps) {
               className="thumbnail"
               src={thumbnail}
               width={205}
-              height={270}              
-              layout='fixed'
+              height={270}
               alt=""
             />
           </div>
@@ -32,7 +31,6 @@ export default function GameItem(props: GameItemProps) {
                   width={54}
                   height={36}
                   alt="console"
-                  layout='fixed'
                 />
               </div>
               <div>

@@ -200,7 +200,6 @@ export default function SignUpSuccess() {
           <Link href="/sign-in">
             <a
               className="btn btn-top-up fw-medium text-lg text-white rounded-pill"
-              href="../index.html"
               role="button"
             >
               Top Up
